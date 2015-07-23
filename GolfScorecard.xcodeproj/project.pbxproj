@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BEC89F891B5C4845007155CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC89F881B5C4845007155CE /* Main.storyboard */; };
+		BEC89F8B1B5CC660007155CE /* EndOfRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC89F8A1B5CC660007155CE /* EndOfRoundViewController.swift */; };
+		BED8B9CE1B52E1650069FAD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8B9CD1B52E1650069FAD2 /* AppDelegate.swift */; };
+		BED8B9D01B52E1650069FAD2 /* BeginRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8B9CF1B52E1650069FAD2 /* BeginRoundViewController.swift */; };
+		BED8B9D51B52E1650069FAD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED8B9D41B52E1650069FAD2 /* Images.xcassets */; };
+		BED8B9D81B52E1650069FAD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BED8B9D61B52E1650069FAD2 /* LaunchScreen.xib */; };
+		BED8B9E41B52E1650069FAD2 /* GolfScorecardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8B9E31B52E1650069FAD2 /* GolfScorecardTests.swift */; };
+		BED8B9EE1B52E1F40069FAD2 /* RoundDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8B9ED1B52E1F40069FAD2 /* RoundDetailsViewController.swift */; };
+		BED8B9F01B5439800069FAD2 /* EnterHoleInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8B9EF1B5439800069FAD2 /* EnterHoleInfoViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BED8B9DE1B52E1650069FAD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BED8B9C01B52E1650069FAD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BED8B9C71B52E1650069FAD2;
+			remoteInfo = GolfScorecard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BEC89F881B5C4845007155CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BEC89F8A1B5CC660007155CE /* EndOfRoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndOfRoundViewController.swift; sourceTree = "<group>"; };
+		BED8B9C81B52E1650069FAD2 /* GolfScorecard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GolfScorecard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BED8B9CC1B52E1650069FAD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BED8B9CD1B52E1650069FAD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BED8B9CF1B52E1650069FAD2 /* BeginRoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginRoundViewController.swift; sourceTree = "<group>"; };
+		BED8B9D41B52E1650069FAD2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BED8B9D71B52E1650069FAD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BED8B9DD1B52E1650069FAD2 /* GolfScorecardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GolfScorecardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BED8B9E21B52E1650069FAD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BED8B9E31B52E1650069FAD2 /* GolfScorecardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GolfScorecardTests.swift; sourceTree = "<group>"; };
+		BED8B9ED1B52E1F40069FAD2 /* RoundDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundDetailsViewController.swift; sourceTree = "<group>"; };
+		BED8B9EF1B5439800069FAD2 /* EnterHoleInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterHoleInfoViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BED8B9C51B52E1650069FAD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BED8B9DA1B52E1650069FAD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BED8B9BF1B52E1650069FAD2 = {
+			isa = PBXGroup;
+			children = (
+				BED8B9CA1B52E1650069FAD2 /* GolfScorecard */,
+				BED8B9E01B52E1650069FAD2 /* GolfScorecardTests */,
+				BED8B9C91B52E1650069FAD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BED8B9C91B52E1650069FAD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BED8B9C81B52E1650069FAD2 /* GolfScorecard.app */,
+				BED8B9DD1B52E1650069FAD2 /* GolfScorecardTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BED8B9CA1B52E1650069FAD2 /* GolfScorecard */ = {
+			isa = PBXGroup;
+			children = (
+				BED8B9CD1B52E1650069FAD2 /* AppDelegate.swift */,
+				BED8B9CF1B52E1650069FAD2 /* BeginRoundViewController.swift */,
+				BED8B9ED1B52E1F40069FAD2 /* RoundDetailsViewController.swift */,
+				BED8B9EF1B5439800069FAD2 /* EnterHoleInfoViewController.swift */,
+				BEC89F8A1B5CC660007155CE /* EndOfRoundViewController.swift */,
+				BEC89F881B5C4845007155CE /* Main.storyboard */,
+				BED8B9D41B52E1650069FAD2 /* Images.xcassets */,
+				BED8B9D61B52E1650069FAD2 /* LaunchScreen.xib */,
+				BED8B9CB1B52E1650069FAD2 /* Supporting Files */,
+			);
+			path = GolfScorecard;
+			sourceTree = "<group>";
+		};
+		BED8B9CB1B52E1650069FAD2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BED8B9CC1B52E1650069FAD2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BED8B9E01B52E1650069FAD2 /* GolfScorecardTests */ = {
+			isa = PBXGroup;
+			children = (
+				BED8B9E31B52E1650069FAD2 /* GolfScorecardTests.swift */,
+				BED8B9E11B52E1650069FAD2 /* Supporting Files */,
+			);
+			path = GolfScorecardTests;
+			sourceTree = "<group>";
+		};
+		BED8B9E11B52E1650069FAD2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BED8B9E21B52E1650069FAD2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BED8B9C71B52E1650069FAD2 /* GolfScorecard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BED8B9E71B52E1650069FAD2 /* Build configuration list for PBXNativeTarget "GolfScorecard" */;
+			buildPhases = (
+				BED8B9C41B52E1650069FAD2 /* Sources */,
+				BED8B9C51B52E1650069FAD2 /* Frameworks */,
+				BED8B9C61B52E1650069FAD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GolfScorecard;
+			productName = GolfScorecard;
+			productReference = BED8B9C81B52E1650069FAD2 /* GolfScorecard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BED8B9DC1B52E1650069FAD2 /* GolfScorecardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BED8B9EA1B52E1650069FAD2 /* Build configuration list for PBXNativeTarget "GolfScorecardTests" */;
+			buildPhases = (
+				BED8B9D91B52E1650069FAD2 /* Sources */,
+				BED8B9DA1B52E1650069FAD2 /* Frameworks */,
+				BED8B9DB1B52E1650069FAD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BED8B9DF1B52E1650069FAD2 /* PBXTargetDependency */,
+			);
+			name = GolfScorecardTests;
+			productName = GolfScorecardTests;
+			productReference = BED8B9DD1B52E1650069FAD2 /* GolfScorecardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BED8B9C01B52E1650069FAD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Concannon Computing";
+				TargetAttributes = {
+					BED8B9C71B52E1650069FAD2 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					BED8B9DC1B52E1650069FAD2 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = BED8B9C71B52E1650069FAD2;
+					};
+				};
+			};
+			buildConfigurationList = BED8B9C31B52E1650069FAD2 /* Build configuration list for PBXProject "GolfScorecard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BED8B9BF1B52E1650069FAD2;
+			productRefGroup = BED8B9C91B52E1650069FAD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BED8B9C71B52E1650069FAD2 /* GolfScorecard */,
+				BED8B9DC1B52E1650069FAD2 /* GolfScorecardTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BED8B9C61B52E1650069FAD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BED8B9D81B52E1650069FAD2 /* LaunchScreen.xib in Resources */,
+				BEC89F891B5C4845007155CE /* Main.storyboard in Resources */,
+				BED8B9D51B52E1650069FAD2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BED8B9DB1B52E1650069FAD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BED8B9C41B52E1650069FAD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BED8B9EE1B52E1F40069FAD2 /* RoundDetailsViewController.swift in Sources */,
+				BEC89F8B1B5CC660007155CE /* EndOfRoundViewController.swift in Sources */,
+				BED8B9D01B52E1650069FAD2 /* BeginRoundViewController.swift in Sources */,
+				BED8B9CE1B52E1650069FAD2 /* AppDelegate.swift in Sources */,
+				BED8B9F01B5439800069FAD2 /* EnterHoleInfoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BED8B9D91B52E1650069FAD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BED8B9E41B52E1650069FAD2 /* GolfScorecardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BED8B9DF1B52E1650069FAD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BED8B9C71B52E1650069FAD2 /* GolfScorecard */;
+			targetProxy = BED8B9DE1B52E1650069FAD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BED8B9D61B52E1650069FAD2 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BED8B9D71B52E1650069FAD2 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BED8B9E51B52E1650069FAD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BED8B9E61B52E1650069FAD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BED8B9E81B52E1650069FAD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GolfScorecard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BED8B9E91B52E1650069FAD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GolfScorecard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BED8B9EB1B52E1650069FAD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GolfScorecardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GolfScorecard.app/GolfScorecard";
+			};
+			name = Debug;
+		};
+		BED8B9EC1B52E1650069FAD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GolfScorecardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GolfScorecard.app/GolfScorecard";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BED8B9C31B52E1650069FAD2 /* Build configuration list for PBXProject "GolfScorecard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BED8B9E51B52E1650069FAD2 /* Debug */,
+				BED8B9E61B52E1650069FAD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BED8B9E71B52E1650069FAD2 /* Build configuration list for PBXNativeTarget "GolfScorecard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BED8B9E81B52E1650069FAD2 /* Debug */,
+				BED8B9E91B52E1650069FAD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BED8B9EA1B52E1650069FAD2 /* Build configuration list for PBXNativeTarget "GolfScorecardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BED8B9EB1B52E1650069FAD2 /* Debug */,
+				BED8B9EC1B52E1650069FAD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BED8B9C01B52E1650069FAD2 /* Project object */;
+}
