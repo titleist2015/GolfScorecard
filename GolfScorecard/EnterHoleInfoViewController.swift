@@ -14,7 +14,7 @@ class EnterHoleInfoViewController: UIViewController {
     var finalScore = Int()
     var holePar = Int()
     var finalPar = Int()
-    
+    // git test
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var nextHoleButton: UIButton!
     @IBOutlet weak var selectedParSegmentedControl: UISegmentedControl!
