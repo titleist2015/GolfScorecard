@@ -48,7 +48,7 @@ class EnterHoleInfoViewController: UIViewController {
     
     func submitResults() -> (Int, Int, Int) {
         var nextHoleNum = holeNum + 1
-        var nextFinalscore = finalScore
+        var nextFinalscore = Int()
         if let enteredText = enteredScoreTextField.text.toInt() {
             var nextFinalScore = finalScore + enteredText
         }
@@ -94,6 +94,8 @@ class EnterHoleInfoViewController: UIViewController {
         }
         
     }
+    
+    // ************** GET DATA ON END OF ROUND RIGHT ******************
     
     
 }
