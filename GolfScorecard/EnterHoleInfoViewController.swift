@@ -11,8 +11,10 @@ import UIKit
 class EnterHoleInfoViewController: UIViewController {
     
     var holeNum = Int()
+    var scoresEntered = [Int()]
     var finalScore = Int()
     var holePar = Int()
+    var parsEntered = [Int()]
     var finalPar = Int()
     
     @IBOutlet weak var navBar: UINavigationItem!
@@ -22,9 +24,9 @@ class EnterHoleInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         navBar.title = "Hole Number \(holeNum)"
-        println("\(finalScore)")
-        println("\(finalPar)")
+        println("\(holeNum)")
         
     }
 
@@ -48,9 +50,10 @@ class EnterHoleInfoViewController: UIViewController {
     
     func submitResults() -> (Int, Int, Int) {
         var nextHoleNum = holeNum + 1
-        var nextFinalscore = Int()
+        var nextFinalScore = Int()
         if let enteredText = enteredScoreTextField.text.toInt() {
-            var nextFinalScore = finalScore + enteredText
+            scoresEntered.append(enteredText)
+            nextFinalScore = scoresEntered.reduce(0, combine: +)
         }
         
         var selectedPar = Int()
@@ -62,9 +65,11 @@ class EnterHoleInfoViewController: UIViewController {
         default: println("error in switch statement of submitResults()")
         }
         
-        var nextFinalPar = finalPar + selectedPar
+        parsEntered.append(selectedPar)
         
-        return (nextHoleNum, nextFinalscore, nextFinalPar)
+        var nextFinalPar = parsEntered.reduce(0, combine: +)
+        
+        return (nextHoleNum, nextFinalScore, nextFinalPar)
     
     }
     
