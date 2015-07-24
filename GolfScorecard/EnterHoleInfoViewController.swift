@@ -24,13 +24,9 @@ class EnterHoleInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        navBar.title = "Hole Number \(holeNum)"
-        println("\(holeNum)")
+        addDoneButtonOnKeyboard()
         
-
-        self.addDoneButtonOnKeyboard()
-
+        navBar.title = "Hole Number \(holeNum)"
         
     }
 
@@ -58,6 +54,14 @@ class EnterHoleInfoViewController: UIViewController {
         if let enteredText = enteredScoreTextField.text.toInt() {
             scoresEntered.append(enteredText)
             nextFinalScore = scoresEntered.reduce(0, combine: +)
+        }
+        else {
+            var noScoreEnteredAlert = UIAlertController(title: "No Score Entered", message: "You didn't enter a score for this hole. Enter one now.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            noScoreEnteredAlert.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
+
+            presentViewController(noScoreEnteredAlert, animated: true, completion: nil)
+            
         }
         
         var selectedPar = Int()
@@ -108,7 +112,6 @@ class EnterHoleInfoViewController: UIViewController {
     func addDoneButtonOnKeyboard()
     {
         var doneToolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
-        // doneToolbar.barStyle = UIBarStyle.BlackTranslucent
         
         var flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         var done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: Selector("doneButtonAction"))
