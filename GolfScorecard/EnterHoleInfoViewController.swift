@@ -28,6 +28,10 @@ class EnterHoleInfoViewController: UIViewController {
         navBar.title = "Hole Number \(holeNum)"
         println("\(holeNum)")
         
+
+        self.addDoneButtonOnKeyboard()
+
+        
     }
 
 
@@ -74,6 +78,7 @@ class EnterHoleInfoViewController: UIViewController {
     }
     
     @IBAction func finishRound(sender: AnyObject) {
+        
         performSegueWithIdentifier("HoleInfoToEndOfRound", sender: self)
     }
     
@@ -84,7 +89,7 @@ class EnterHoleInfoViewController: UIViewController {
         case 0: selectedPar = 3
         case 1: selectedPar = 4
         case 2: selectedPar = 5
-        default: println("error in switch statement of submitResults()")
+        default: println("error in switch statement of prepareForSegue")
         }
         
         if segue.identifier == "HoleInfoToEndOfRound" {
@@ -100,7 +105,32 @@ class EnterHoleInfoViewController: UIViewController {
         
     }
     
-    // ************** GET DATA ON END OF ROUND RIGHT ******************
+    func addDoneButtonOnKeyboard()
+    {
+        var doneToolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
+        // doneToolbar.barStyle = UIBarStyle.BlackTranslucent
+        
+        var flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        var done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: Selector("doneButtonAction"))
+        
+        var items = NSMutableArray()
+        items.addObject(flexSpace)
+        items.addObject(done)
+        
+        doneToolbar.items = items as [AnyObject]
+        doneToolbar.sizeToFit()
+        
+        self.enteredScoreTextField.inputAccessoryView = doneToolbar
+        self.enteredScoreTextField.inputAccessoryView = doneToolbar
+        
+    }
+    
+    func doneButtonAction()
+    {
+        self.enteredScoreTextField.resignFirstResponder()
+        self.enteredScoreTextField.resignFirstResponder()
+    }
+    
     
     
 }
