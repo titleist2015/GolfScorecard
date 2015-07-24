@@ -30,7 +30,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="kFO-ca-6sP" kind="show" identifier="ToRoundDetails" id="ZJA-dS-Spg"/>
+                                    <segue destination="kNd-eE-HS1" kind="show" identifier="BeginRound" id="4My-UR-q7P"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -44,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="349"/>
+            <point key="canvasLocation" x="1134" y="349"/>
         </scene>
         <!--Round Details-->
         <scene sceneID="jT5-dz-w88">
@@ -129,19 +129,30 @@
                                     <action selector="changeNumOfPlayers:" destination="kNd-eE-HS1" eventType="valueChanged" id="S4P-YJ-sDL"/>
                                 </connections>
                             </segmentedControl>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nax-rD-IDN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Round Details" id="plW-78-J74">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="xKd-GM-LGv"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.58688119400000005" green="1" blue="0.53096480970000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="aBy-nK-ENt" firstAttribute="leading" secondItem="dc8-QV-3fl" secondAttribute="leading" id="3lt-ds-xqb"/>
                             <constraint firstItem="gMi-94-cSa" firstAttribute="centerX" secondItem="J1c-Q0-ig5" secondAttribute="centerX" id="4AF-Tu-ob6"/>
-                            <constraint firstItem="9lK-cZ-84q" firstAttribute="top" secondItem="Wly-ND-MAe" secondAttribute="bottom" constant="92" id="5ZC-Z8-xRa"/>
+                            <constraint firstItem="Nax-rD-IDN" firstAttribute="top" secondItem="J1c-Q0-ig5" secondAttribute="top" id="5LM-Sr-SNs"/>
+                            <constraint firstItem="9lK-cZ-84q" firstAttribute="top" secondItem="Wly-ND-MAe" secondAttribute="bottom" constant="136" id="5ZC-Z8-xRa"/>
                             <constraint firstItem="aBy-nK-ENt" firstAttribute="leading" secondItem="J1c-Q0-ig5" secondAttribute="leadingMargin" id="6fW-0G-Nd9"/>
+                            <constraint firstItem="Nax-rD-IDN" firstAttribute="centerX" secondItem="gMi-94-cSa" secondAttribute="centerX" id="8mI-uD-cIu"/>
                             <constraint firstItem="7qu-YG-17S" firstAttribute="top" secondItem="2Pm-Za-0se" secondAttribute="bottom" constant="168" id="CTZ-DB-y1v"/>
                             <constraint firstItem="2Pm-Za-0se" firstAttribute="trailing" secondItem="ZsB-jD-LBK" secondAttribute="trailing" id="EKb-qD-KLJ"/>
                             <constraint firstItem="dc8-QV-3fl" firstAttribute="top" secondItem="ZsB-jD-LBK" secondAttribute="top" constant="-2" id="Ftp-8W-jF8"/>
                             <constraint firstItem="7qu-YG-17S" firstAttribute="top" secondItem="gMi-94-cSa" secondAttribute="bottom" constant="14" id="HBi-BC-o5s"/>
                             <constraint firstItem="9lK-cZ-84q" firstAttribute="leading" secondItem="dc8-QV-3fl" secondAttribute="leading" id="LIh-uG-Bfu"/>
-                            <constraint firstItem="gMi-94-cSa" firstAttribute="top" secondItem="Wly-ND-MAe" secondAttribute="bottom" constant="457" id="Nw4-yV-pmY"/>
+                            <constraint firstItem="Nax-rD-IDN" firstAttribute="leading" secondItem="J1c-Q0-ig5" secondAttribute="leading" id="Min-Sh-hsv"/>
+                            <constraint firstItem="gMi-94-cSa" firstAttribute="top" secondItem="Wly-ND-MAe" secondAttribute="bottom" constant="501" id="Nw4-yV-pmY"/>
                             <constraint firstItem="IER-ix-GrH" firstAttribute="trailing" secondItem="ZsB-jD-LBK" secondAttribute="trailing" id="VBx-o8-C1v"/>
                             <constraint firstItem="2Pm-Za-0se" firstAttribute="trailing" secondItem="J1c-Q0-ig5" secondAttribute="trailingMargin" id="nJK-Na-Gsb"/>
                             <constraint firstItem="aBy-nK-ENt" firstAttribute="baseline" secondItem="2Pm-Za-0se" secondAttribute="baseline" id="nTA-rb-hfU"/>
@@ -160,7 +171,7 @@
                         <outlet property="numOfPlayersSegmentedControl" destination="ZsB-jD-LBK" id="R93-5H-GmR"/>
                         <outlet property="numberOfHolesSegmentedControl" destination="IER-ix-GrH" id="UyL-qg-Ogu"/>
                         <outlet property="selectedPlayerName" destination="2Pm-Za-0se" id="uAo-Y3-sYX"/>
-                        <segue destination="36v-tj-pZF" kind="show" identifier="RoundDetailsToHoleOne" id="ydS-9r-bf2"/>
+                        <segue destination="nUH-eb-FqY" kind="show" identifier="RoundDetailsToHoleOne" id="GS3-Pw-jBg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2X9-ey-vZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -168,41 +179,45 @@
             </objects>
             <point key="canvasLocation" x="1868" y="349"/>
         </scene>
-        <!--Enter Hole Info View Controller-->
-        <scene sceneID="5Mj-0q-kV0">
+        <!--Hole Number: -->
+        <scene sceneID="csg-UM-8l2">
             <objects>
-                <viewController storyboardIdentifier="EnterHoleInfo" id="36v-tj-pZF" customClass="EnterHoleInfoViewController" customModule="GolfScorecard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EnterHoleInfo" id="oSA-fg-V6K" customClass="EnterHoleInfoViewController" customModule="GolfScorecard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jRJ-Ew-jl3"/>
-                        <viewControllerLayoutGuide type="bottom" id="BeJ-ih-1pf"/>
+                        <viewControllerLayoutGuide type="top" id="aOw-XJ-u1X"/>
+                        <viewControllerLayoutGuide type="bottom" id="v9o-5Z-m0d"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="S1D-h0-7hk">
+                    <view key="view" contentMode="scaleToFill" id="Fca-sF-tiU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Par:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jze-QX-chr">
-                                <rect key="frame" x="16" y="199" width="39" height="27"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTR-4J-fw4">
+                                <rect key="frame" x="177" y="494" width="246" height="98"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="oeY-40-uyH"/>
+                                    <constraint firstAttribute="width" constant="246" id="zwC-pu-meW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <state key="normal" title="Next Hole">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextHole" destination="oSA-fg-V6K" eventType="touchUpInside" id="gP3-ea-wuR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Par:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spi-k4-TQw">
+                                <rect key="frame" x="16" y="141" width="139" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="LVg-uY-Edb"/>
+                                    <constraint firstAttribute="height" constant="93" id="lT3-bg-wuG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQE-At-GOt">
-                                <rect key="frame" x="16" y="368" width="63" height="27"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pzu-dx-b11">
+                                <rect key="frame" x="481" y="174" width="103" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="ETm-45-ASt"/>
-                                    <constraint firstAttribute="width" constant="63" id="tok-zh-ojJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6aI-V6-Cfh">
-                                <rect key="frame" x="461" y="199" width="123" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="123" id="fCA-Qb-MCz"/>
+                                    <constraint firstAttribute="width" constant="103" id="eco-tr-UAh"/>
                                 </constraints>
                                 <segments>
                                     <segment title="3"/>
@@ -210,61 +225,55 @@
                                     <segment title="5"/>
                                 </segments>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CHD-NL-Dje">
-                                <rect key="frame" x="536" y="365" width="48" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="itV-JS-qcF">
+                                <rect key="frame" x="531" y="347" width="53" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="udC-nw-6eS"/>
+                                    <constraint firstAttribute="width" constant="53" id="mde-9n-HLe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="editingBegan:" destination="36v-tj-pZF" eventType="editingDidEnd" id="M7h-At-gDB"/>
-                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbt-sD-sxK">
-                                <rect key="frame" x="231" y="481" width="139" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Next Hole">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="nextHole" destination="36v-tj-pZF" eventType="touchUpInside" id="bTi-vg-a2e"/>
-                                    <segue destination="36v-tj-pZF" kind="show" identifier="NextHole" id="d4J-bQ-aJ7"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tc7-fJ-BmU">
+                                <rect key="frame" x="16" y="315" width="139" height="93"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.58688119400000005" green="1" blue="0.53096480970000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="qQE-At-GOt" firstAttribute="leading" secondItem="Jze-QX-chr" secondAttribute="leading" id="2IP-vZ-GBB"/>
-                            <constraint firstItem="qQE-At-GOt" firstAttribute="bottom" secondItem="CHD-NL-Dje" secondAttribute="bottom" id="DiD-F2-Lhh"/>
-                            <constraint firstItem="6aI-V6-Cfh" firstAttribute="top" secondItem="Jze-QX-chr" secondAttribute="top" id="Nc5-vU-dBj"/>
-                            <constraint firstItem="CHD-NL-Dje" firstAttribute="trailing" secondItem="6aI-V6-Cfh" secondAttribute="trailing" id="Z3k-wZ-bnm"/>
-                            <constraint firstItem="qQE-At-GOt" firstAttribute="leading" secondItem="S1D-h0-7hk" secondAttribute="leadingMargin" id="ckB-Mt-0oJ"/>
-                            <constraint firstItem="6aI-V6-Cfh" firstAttribute="trailing" secondItem="S1D-h0-7hk" secondAttribute="trailingMargin" id="jLf-Np-Va5"/>
-                            <constraint firstItem="Jze-QX-chr" firstAttribute="top" secondItem="jRJ-Ew-jl3" secondAttribute="bottom" constant="135" id="mxo-pi-ZH7"/>
-                            <constraint firstItem="BeJ-ih-1pf" firstAttribute="top" secondItem="Vbt-sD-sxK" secondAttribute="bottom" constant="68" id="ohB-4C-FtK"/>
-                            <constraint firstItem="Vbt-sD-sxK" firstAttribute="centerX" secondItem="S1D-h0-7hk" secondAttribute="centerX" id="pf0-pu-Taf"/>
-                            <constraint firstItem="BeJ-ih-1pf" firstAttribute="top" secondItem="qQE-At-GOt" secondAttribute="bottom" constant="205" id="yj5-ck-thW"/>
+                            <constraint firstItem="v9o-5Z-m0d" firstAttribute="top" secondItem="itV-JS-qcF" secondAttribute="bottom" constant="223" id="5c1-lH-22l"/>
+                            <constraint firstItem="spi-k4-TQw" firstAttribute="leading" secondItem="tc7-fJ-BmU" secondAttribute="leading" id="8ay-g4-bAW"/>
+                            <constraint firstItem="mTR-4J-fw4" firstAttribute="top" secondItem="aOw-XJ-u1X" secondAttribute="bottom" constant="430" id="AcW-CL-fEx"/>
+                            <constraint firstItem="pzu-dx-b11" firstAttribute="top" secondItem="aOw-XJ-u1X" secondAttribute="bottom" constant="110" id="ApE-yh-h6R"/>
+                            <constraint firstItem="mTR-4J-fw4" firstAttribute="centerX" secondItem="Fca-sF-tiU" secondAttribute="centerX" id="BpG-aC-CNe"/>
+                            <constraint firstItem="tc7-fJ-BmU" firstAttribute="leading" secondItem="Fca-sF-tiU" secondAttribute="leadingMargin" id="Hec-5U-OT3"/>
+                            <constraint firstItem="pzu-dx-b11" firstAttribute="trailing" secondItem="itV-JS-qcF" secondAttribute="trailing" id="Sby-a3-9Ue"/>
+                            <constraint firstItem="tc7-fJ-BmU" firstAttribute="top" secondItem="spi-k4-TQw" secondAttribute="bottom" constant="81" id="WbW-Iu-lkV"/>
+                            <constraint firstItem="spi-k4-TQw" firstAttribute="top" secondItem="aOw-XJ-u1X" secondAttribute="bottom" constant="77" id="abX-MK-vrL"/>
+                            <constraint firstItem="spi-k4-TQw" firstAttribute="trailing" secondItem="tc7-fJ-BmU" secondAttribute="trailing" id="dcb-O7-SR9"/>
+                            <constraint firstItem="v9o-5Z-m0d" firstAttribute="top" secondItem="mTR-4J-fw4" secondAttribute="bottom" constant="8" symbolic="YES" id="fO5-8e-bLj"/>
+                            <constraint firstItem="pzu-dx-b11" firstAttribute="trailing" secondItem="Fca-sF-tiU" secondAttribute="trailingMargin" id="iQr-e6-1dI"/>
+                            <constraint firstItem="v9o-5Z-m0d" firstAttribute="top" secondItem="tc7-fJ-BmU" secondAttribute="bottom" constant="192" id="pAn-5K-VUN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3zb-9G-gEc">
-                        <barButtonItem key="rightBarButtonItem" title="Finish Round" id="vlB-FR-mZm">
+                    <navigationItem key="navigationItem" title="Hole Number: " id="qTh-jC-RrZ">
+                        <barButtonItem key="rightBarButtonItem" title="Finish Round" id="FtD-EK-JtK">
                             <connections>
-                                <action selector="finishRound" destination="36v-tj-pZF" id="lGI-ko-XIC"/>
+                                <action selector="finishRound:" destination="oSA-fg-V6K" id="Lqu-g9-cpQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="enteredScoreTextField" destination="CHD-NL-Dje" id="HeE-mF-c73"/>
-                        <outlet property="navBar" destination="3zb-9G-gEc" id="HVk-i2-mnp"/>
-                        <outlet property="nextHoleButton" destination="Vbt-sD-sxK" id="A5s-3E-KOb"/>
-                        <outlet property="selectedParSegmentedControl" destination="6aI-V6-Cfh" id="E00-Aw-UBj"/>
-                        <segue destination="jNl-bb-cZk" kind="presentation" identifier="HoleInfoToEndOfRound" id="lNv-jv-AiJ"/>
+                        <outlet property="enteredScoreTextField" destination="itV-JS-qcF" id="bSc-RP-aiy"/>
+                        <outlet property="navBar" destination="qTh-jC-RrZ" id="IQq-Qc-2o9"/>
+                        <outlet property="selectedParSegmentControl" destination="pzu-dx-b11" id="wJV-8v-N2Q"/>
+                        <segue destination="jNl-bb-cZk" kind="presentation" identifier="HoleInfoToEndOfRound" id="GdN-Kg-8Vv"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cdd-RJ-1JG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QeT-Oe-R01" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2600" y="349"/>
+            <point key="canvasLocation" x="3430" y="349"/>
         </scene>
         <!--End Of Round View Controller-->
         <scene sceneID="gFb-oB-vze">
@@ -322,28 +331,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6eA-Ah-0Yy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3291" y="349"/>
+            <point key="canvasLocation" x="4177" y="349"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="K1R-Wv-QdE">
+        <scene sceneID="EX1-a1-vMV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kFO-ca-6sP" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nUH-eb-FqY" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TSl-Rj-Mry">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mWX-Yt-CV9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="kNd-eE-HS1" kind="relationship" relationship="rootViewController" id="A0q-fI-kNY"/>
+                        <segue destination="oSA-fg-V6K" kind="relationship" relationship="rootViewController" id="696-5m-y5q"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Tn-u5-jgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3G-XO-f3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1116" y="349"/>
+            <point key="canvasLocation" x="2618" y="349"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ydS-9r-bf2"/>
-    </inferredMetricsTieBreakers>
 </document>

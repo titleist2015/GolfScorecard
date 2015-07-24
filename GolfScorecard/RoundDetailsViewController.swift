@@ -83,15 +83,19 @@ class RoundDetailsViewController: UIViewController {
 
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "RoundDetailsToHoleOne"{
-            let firstHoleViewController: EnterHoleInfoViewController = segue.destinationViewController as! EnterHoleInfoViewController
-            firstHoleViewController.holeNum = 1
+            
+            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc : EnterHoleInfoViewController = storyboard.instantiateViewControllerWithIdentifier("EnterHoleInfo") as! EnterHoleInfoViewController
+            vc.holeNum = 1
+            vc.finalScore = 0
+            vc.finalPar = 0
+            
+            let navigationController = UINavigationController(rootViewController: vc)
+            
+            self.presentViewController(navigationController, animated: true, completion: nil)
         }
     }
 }
