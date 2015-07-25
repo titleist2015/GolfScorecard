@@ -44,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1134" y="349"/>
+            <point key="canvasLocation" x="1206" y="349"/>
         </scene>
         <!--Round Details-->
         <scene sceneID="jT5-dz-w88">
@@ -298,7 +298,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Your final score was" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBX-7Z-QuY">
                                 <rect key="frame" x="32" y="127" width="219" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="219" id="tHG-th-fDX"/>
+                                    <constraint firstAttribute="width" constant="219" id="Zmq-XA-hp1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -307,23 +307,39 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2s-Dn-VEh">
                                 <rect key="frame" x="149" y="209" width="302" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="302" id="YDg-CP-jHN"/>
+                                    <constraint firstAttribute="width" constant="302" id="E1Z-0I-RML"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="98"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J56-Z4-4ty">
+                                <rect key="frame" x="154" y="466" width="292" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="XJt-jA-cso"/>
+                                    <constraint firstAttribute="width" constant="292" id="YMJ-vE-p94"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Back To Home Screen">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="zIC-7e-GFQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.58688119400000005" green="1" blue="0.53096480970000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="TBX-7Z-QuY" firstAttribute="leading" secondItem="GHK-vj-Hk8" secondAttribute="leadingMargin" constant="16" id="2lz-Q1-r7V"/>
-                            <constraint firstItem="vYH-6i-hEv" firstAttribute="baseline" secondItem="TBX-7Z-QuY" secondAttribute="firstBaseline" id="LK3-nT-ucl"/>
-                            <constraint firstItem="Vp2-bj-nu3" firstAttribute="top" secondItem="o2s-Dn-VEh" secondAttribute="bottom" constant="91" id="NRu-gB-BIW"/>
-                            <constraint firstItem="o2s-Dn-VEh" firstAttribute="top" secondItem="TBX-7Z-QuY" secondAttribute="bottom" constant="52" id="QAg-l4-iMX"/>
-                            <constraint firstItem="o2s-Dn-VEh" firstAttribute="centerX" secondItem="GHK-vj-Hk8" secondAttribute="centerX" id="VQh-6M-qY8"/>
-                            <constraint firstItem="TBX-7Z-QuY" firstAttribute="top" secondItem="2Xi-V0-qPK" secondAttribute="bottom" constant="107" id="eSN-na-oos"/>
-                            <constraint firstItem="TBX-7Z-QuY" firstAttribute="baseline" secondItem="vYH-6i-hEv" secondAttribute="baseline" id="plg-S4-DTL"/>
-                            <constraint firstItem="vYH-6i-hEv" firstAttribute="trailing" secondItem="GHK-vj-Hk8" secondAttribute="trailingMargin" id="zvx-Kh-WFm"/>
+                            <constraint firstItem="Vp2-bj-nu3" firstAttribute="top" secondItem="o2s-Dn-VEh" secondAttribute="bottom" constant="91" id="36j-JQ-kX4"/>
+                            <constraint firstItem="TBX-7Z-QuY" firstAttribute="leading" secondItem="GHK-vj-Hk8" secondAttribute="leadingMargin" constant="16" id="97B-yc-T99"/>
+                            <constraint firstItem="J56-Z4-4ty" firstAttribute="centerX" secondItem="GHK-vj-Hk8" secondAttribute="centerX" id="FJH-UB-dhi"/>
+                            <constraint firstItem="J56-Z4-4ty" firstAttribute="centerX" secondItem="o2s-Dn-VEh" secondAttribute="centerX" id="GH7-D0-jGe"/>
+                            <constraint firstItem="vYH-6i-hEv" firstAttribute="trailing" secondItem="GHK-vj-Hk8" secondAttribute="trailingMargin" id="GkS-Pq-ii4"/>
+                            <constraint firstItem="TBX-7Z-QuY" firstAttribute="top" secondItem="2Xi-V0-qPK" secondAttribute="bottom" constant="107" id="UM3-Sc-C53"/>
+                            <constraint firstItem="vYH-6i-hEv" firstAttribute="baseline" secondItem="TBX-7Z-QuY" secondAttribute="firstBaseline" id="YYl-sQ-nqr"/>
+                            <constraint firstItem="vYH-6i-hEv" firstAttribute="baseline" secondItem="TBX-7Z-QuY" secondAttribute="baseline" id="axu-ye-aNs"/>
+                            <constraint firstAttribute="bottom" secondItem="J56-Z4-4ty" secondAttribute="bottom" constant="20" symbolic="YES" id="f5d-Kx-bgv"/>
+                            <constraint firstItem="o2s-Dn-VEh" firstAttribute="top" secondItem="TBX-7Z-QuY" secondAttribute="bottom" constant="52" id="zhF-4K-e0d"/>
                         </constraints>
                     </view>
                     <connections>
@@ -333,7 +349,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6eA-Ah-0Yy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4989" y="349"/>
+            <point key="canvasLocation" x="4933" y="349"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EX1-a1-vMV">
