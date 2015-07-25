@@ -56,12 +56,7 @@ class EnterHoleInfoViewController: UIViewController {
             nextFinalScore = scoresEntered.reduce(0, combine: +)
         }
         else {
-            var noScoreEnteredAlert = UIAlertController(title: "No Score Entered", message: "You didn't enter a score for this hole. Enter one now.", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            noScoreEnteredAlert.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
-
-            presentViewController(noScoreEnteredAlert, animated: true, completion: nil)
-            
+            showAlert()
         }
         
         var selectedPar = Int()
@@ -83,7 +78,13 @@ class EnterHoleInfoViewController: UIViewController {
     
     @IBAction func finishRound(sender: AnyObject) {
         
-        performSegueWithIdentifier("HoleInfoToEndOfRound", sender: self)
+        if enteredScoreTextField.text.toInt() == nil{
+            showAlert()
+        }
+        else {
+        
+            performSegueWithIdentifier("HoleInfoToEndOfRound", sender: self)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -134,7 +135,14 @@ class EnterHoleInfoViewController: UIViewController {
         self.enteredScoreTextField.resignFirstResponder()
     }
     
-    
+    func showAlert(){
+        var noScoreEnteredAlert = UIAlertController(title: "No Score Entered", message: "You didn't enter a score for this hole. Enter one now.", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        noScoreEnteredAlert.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
+        
+        presentViewController(noScoreEnteredAlert, animated: true, completion: nil)
+
+    }
     
 }
 
