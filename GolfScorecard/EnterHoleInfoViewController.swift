@@ -10,23 +10,40 @@ import UIKit
 
 class EnterHoleInfoViewController: UIViewController {
     
-    var holeNum = Int()
-    var scoresEntered = [Int()]
-    var finalScore = Int()
-    var holePar = Int()
-    var parsEntered = [Int()]
-    var finalPar = Int()
+//    var holeNum = Int()
+//    var scoresEntered = [Int()]
+//    var finalScore = Int()
+//    var holePar = Int()
+//    var parsEntered = [Int()]
+//    var finalPar = Int()
     
+    var allHoles: [Hole] = []
+    var thisHole = Hole()
+    var backNum = 0
+    
+    @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var selectedParSegmentControl: UISegmentedControl!
     @IBOutlet weak var enteredScoreTextField: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        addDoneButtonOnKeyboard()
         
-        navBar.title = "Hole Number \(holeNum)"
+        for x in allHoles {
+            println("view did load")
+            println(x.holeInfo)
+        }
+
+
+        if thisHole.number == 1 {
+            backButton.enabled = false
+            backButton.title = ""
+        }
+        else {
+            backButton.title = "Hole \(thisHole.number - 1)"
+        }
+        enteredScoreTextField.becomeFirstResponder()
+        title = "Hole Number \(thisHole.number)"
         
     }
 
@@ -37,81 +54,74 @@ class EnterHoleInfoViewController: UIViewController {
 
     @IBAction func nextHole() {
         
-        let (nextHoleNum, nextHoleFinalScore, nextHoleFinalPar) = submitResults()
+        if let enteredScore = enteredScoreTextField.text.toInt(){
+        }
+        else {
+            showAlert()
+        }
         
+        switch selectedParSegmentControl.selectedSegmentIndex {
+        case 0: thisHole.par = 3
+        case 1: thisHole.par = 4
+        case 2: thisHole.par = 5
+        default: println("error in next hole")
+        }
+        if let score = enteredScoreTextField.text.toInt() {
+            thisHole.score = score
+        }
+    
         let nextHole = self.storyboard?.instantiateViewControllerWithIdentifier("EnterHoleInfo") as! EnterHoleInfoViewController
         
-        nextHole.holeNum = nextHoleNum
-        nextHole.finalScore = nextHoleFinalScore
-        nextHole.finalPar = nextHoleFinalPar
+        nextHole.thisHole.number = thisHole.number + 1
+        
+        allHoles.append(thisHole)
+        
+        nextHole.allHoles = allHoles
+        
+        println("next hole")
+        for x in allHoles {
+            println(x.holeInfo)
+        }
+        
+        
+        println(back)
+
         
         self.navigationController?.pushViewController(nextHole, animated: true)
     }
-    
-    func submitResults() -> (Int, Int, Int) {
-        var nextHoleNum = holeNum + 1
-        var nextFinalScore = Int()
-        if let enteredText = enteredScoreTextField.text.toInt() {
-            scoresEntered.append(enteredText)
-            nextFinalScore = scoresEntered.reduce(0, combine: +)
-        }
-        else {
-            showAlert()
-        }
-        
-        var selectedPar = Int()
-        
-        switch selectedParSegmentControl.selectedSegmentIndex {
-        case 0: selectedPar = 3
-        case 1: selectedPar = 4
-        case 2: selectedPar = 5
-        default: println("error in switch statement of submitResults()")
-        }
-        
-        parsEntered.append(selectedPar)
-        
-        var nextFinalPar = parsEntered.reduce(0, combine: +)
-        
-        return (nextHoleNum, nextFinalScore, nextFinalPar)
-    
-    }
-    
-    @IBAction func finishRound(sender: AnyObject) {
-        
-        if enteredScoreTextField.text.toInt() == nil{
-            showAlert()
-        }
-        else {
-        
-            performSegueWithIdentifier("HoleInfoToEndOfRound", sender: self)
-        }
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var selectedPar = Int()
-        
-        switch selectedParSegmentControl.selectedSegmentIndex {
-        case 0: selectedPar = 3
-        case 1: selectedPar = 4
-        case 2: selectedPar = 5
-        default: println("error in switch statement of prepareForSegue")
-        }
+
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "HoleInfoToEndOfRound" {
-            let endOfRound = segue.destinationViewController as! EndOfRoundViewController
-        
-            if let enteredText = enteredScoreTextField.text.toInt(){
-                endOfRound.finalScoreView = finalScore + enteredText
+            switch selectedParSegmentControl.selectedSegmentIndex {
+            case 0: thisHole.par = 3
+            case 1: thisHole.par = 4
+            case 2: thisHole.par = 5
+            default: println("error in prepareForSegue")
+            }
+            if let score = enteredScoreTextField.text.toInt() {
+                thisHole.score = score
             }
             
-            endOfRound.finalPar = finalPar + selectedPar
-        
+            allHoles.append(thisHole)
+            
+            println("finishround")
+            for x in allHoles {
+                println(x.holeInfo)
+            }
+
+
+            
+            let endOfRound = segue.destinationViewController as! EndOfRoundViewController
+            endOfRound.numOfHolesPlayed = thisHole.number
+            endOfRound.allHoles = allHoles
+            
+
         }
-        
+      
     }
     
-    func addDoneButtonOnKeyboard()
-    {
+    func addDoneButtonOnKeyboard() {
         var doneToolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
         
         var flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
@@ -124,15 +134,15 @@ class EnterHoleInfoViewController: UIViewController {
         doneToolbar.items = items as [AnyObject]
         doneToolbar.sizeToFit()
         
-        self.enteredScoreTextField.inputAccessoryView = doneToolbar
-        self.enteredScoreTextField.inputAccessoryView = doneToolbar
+        enteredScoreTextField.inputAccessoryView = doneToolbar
+        enteredScoreTextField.inputAccessoryView = doneToolbar
         
     }
     
     func doneButtonAction()
     {
-        self.enteredScoreTextField.resignFirstResponder()
-        self.enteredScoreTextField.resignFirstResponder()
+        enteredScoreTextField.resignFirstResponder()
+        enteredScoreTextField.resignFirstResponder()
     }
     
     func showAlert(){
@@ -141,16 +151,54 @@ class EnterHoleInfoViewController: UIViewController {
         noScoreEnteredAlert.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
         
         presentViewController(noScoreEnteredAlert, animated: true, completion: nil)
-
     }
     
+    
+    @IBAction func finishRound(sender: AnyObject) {
+        
+        if enteredScoreTextField.text.toInt() == nil{
+            showAlert()
+        }
+        else {
+            
+            performSegueWithIdentifier("HoleInfoToEndOfRound", sender: self)
+        }
+    }
+    
+    // work for editingPreviousHOles
+    
+    override func didMoveToParentViewController(parent: UIViewController?) {
+        if (!(parent?.isEqual(self.parentViewController) ?? false)) {
+            
+        }
+    }
+////
+//    func back(sender: UIBarButtonItem) {
+//        println("testback")
+//        navigationController?.popViewControllerAnimated(true)
+//    }
+    
+    @IBAction func back(sender: UIBarButtonItem) {
+        navigationController?.popViewControllerAnimated(true)
+        println("Before remove")
+        println(thisHole.number)
+        backNum = thisHole.number - 2
+        for x in allHoles {
+            println(x.holeInfo)
+        }
+        
+        println(backNum)
+        
+        println("after remove")
+ 
+        allHoles.removeAtIndex(backNum)
+        for x in allHoles {
+            println(x.holeInfo)
+        }
+
+    }
+
 }
-
-
-
-
-
-
 
 
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE5DC4A51B6719EC00094377 /* Hole.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5DC4A41B6719EC00094377 /* Hole.swift */; };
+		BE5DC4A71B67223D00094377 /* EndOfRoundInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5DC4A61B67223D00094377 /* EndOfRoundInfo.swift */; };
 		BEC89F891B5C4845007155CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC89F881B5C4845007155CE /* Main.storyboard */; };
 		BEC89F8B1B5CC660007155CE /* EndOfRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC89F8A1B5CC660007155CE /* EndOfRoundViewController.swift */; };
 		BED8B9CE1B52E1650069FAD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8B9CD1B52E1650069FAD2 /* AppDelegate.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE5DC4A41B6719EC00094377 /* Hole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hole.swift; sourceTree = "<group>"; };
+		BE5DC4A61B67223D00094377 /* EndOfRoundInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndOfRoundInfo.swift; sourceTree = "<group>"; };
 		BEC89F881B5C4845007155CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BEC89F8A1B5CC660007155CE /* EndOfRoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndOfRoundViewController.swift; sourceTree = "<group>"; };
 		BED8B9C81B52E1650069FAD2 /* GolfScorecard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GolfScorecard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +90,8 @@
 				BED8B9CD1B52E1650069FAD2 /* AppDelegate.swift */,
 				BED8B9CF1B52E1650069FAD2 /* BeginRoundViewController.swift */,
 				BED8B9ED1B52E1F40069FAD2 /* RoundDetailsViewController.swift */,
+				BE5DC4A41B6719EC00094377 /* Hole.swift */,
+				BE5DC4A61B67223D00094377 /* EndOfRoundInfo.swift */,
 				BED8B9EF1B5439800069FAD2 /* EnterHoleInfoViewController.swift */,
 				BEC89F8A1B5CC660007155CE /* EndOfRoundViewController.swift */,
 				BEC89F881B5C4845007155CE /* Main.storyboard */,
@@ -221,7 +227,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE5DC4A71B67223D00094377 /* EndOfRoundInfo.swift in Sources */,
 				BED8B9EE1B52E1F40069FAD2 /* RoundDetailsViewController.swift in Sources */,
+				BE5DC4A51B6719EC00094377 /* Hole.swift in Sources */,
 				BEC89F8B1B5CC660007155CE /* EndOfRoundViewController.swift in Sources */,
 				BED8B9D01B52E1650069FAD2 /* BeginRoundViewController.swift in Sources */,
 				BED8B9CE1B52E1650069FAD2 /* AppDelegate.swift in Sources */,

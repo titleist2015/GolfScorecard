@@ -89,9 +89,10 @@ class RoundDetailsViewController: UIViewController {
             
             let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc : EnterHoleInfoViewController = storyboard.instantiateViewControllerWithIdentifier("EnterHoleInfo") as! EnterHoleInfoViewController
-            vc.holeNum = 1
-            vc.finalScore = 0
-            vc.finalPar = 0
+//            vc.holeNum = 1
+//            vc.finalScore = 0
+//            vc.finalPar = 0
+            vc.thisHole.number = 1
             
             let navigationController = UINavigationController(rootViewController: vc)
             

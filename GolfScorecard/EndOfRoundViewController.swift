@@ -11,29 +11,40 @@ import UIKit
 class EndOfRoundViewController: UIViewController {
     
     var finalScoreView = Int()
-    var finalPar = Int()
-    var relativeToPar = Int()
+    var allHoles = [Hole]()
+    var info = EndOfRoundInfo()
+    var numOfHolesPlayed = Int()
 
     @IBOutlet weak var parLabel: UILabel!
     @IBOutlet weak var finalScoreLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var count = allHoles.count
         
-        
-        finalScoreLabel.text = "\(finalScoreView)"
-        
-        relativeToPar = finalScoreView - finalPar
-        
-        if relativeToPar > 0 {
-            parLabel.text = "+ \(relativeToPar)"
+        for i in 0...(count - 1) {
+            let thisIndex = allHoles [ i + 1 ]
+            if let possibleIndex = thisIndex as ArraySlice? {
+                if allHoles[i].number ==  possibleIndex.number  {
+                        allHoles.removeAtIndex(i)
+                    }
+                    else {
+                        println("NIL")
+                    }
+                }
         }
-        else if relativeToPar == 0 {
-            parLabel.text = "E"
-        }
-        else if relativeToPar < 0 {
-            parLabel.text = "\(relativeToPar)"
-        }
+        
+        // ************ fix addidng too much too array problem up top 
+//            else {
+//                if allHoles[i].number == allHoles[i - 1].number {
+//                    allHoles.removeAtIndex(i)
+//                }
+//            }
+        
+        info.allHoles = allHoles
+        parLabel.text = info.relativeToPar
+        finalScoreLabel.text = "\(info.totalScore)"
+
     }
 
     override func didReceiveMemoryWarning() {
